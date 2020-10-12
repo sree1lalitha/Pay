@@ -1,0 +1,1218 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Reference</title>
+
+    <style media="screen">
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s, .highlight .sa, .highlight .dl {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf, .highlight .fm {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv, .highlight .vm {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #f92672;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <style media="print">
+      * {
+        -webkit-transition:none!important;
+        transition:none!important;
+      }
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: #586e75;
+}
+.highlight .err {
+  color: #002b36;
+  background-color: #dc322f;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
+  color: #657b83;
+}
+.highlight .cp {
+  color: #b58900;
+}
+.highlight .nt {
+  color: #b58900;
+}
+.highlight .o, .highlight .ow {
+  color: #93a1a1;
+}
+.highlight .p, .highlight .pi {
+  color: #93a1a1;
+}
+.highlight .gi {
+  color: #859900;
+}
+.highlight .gd {
+  color: #dc322f;
+}
+.highlight .gh {
+  color: #268bd2;
+  background-color: #002b36;
+  font-weight: bold;
+}
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+  color: #6c71c4;
+}
+.highlight .kc {
+  color: #cb4b16;
+}
+.highlight .kt {
+  color: #cb4b16;
+}
+.highlight .kd {
+  color: #cb4b16;
+}
+.highlight .s, .highlight .sa, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
+  color: #859900;
+}
+.highlight .sr {
+  color: #2aa198;
+}
+.highlight .si {
+  color: #d33682;
+}
+.highlight .se {
+  color: #d33682;
+}
+.highlight .nn {
+  color: #b58900;
+}
+.highlight .nc {
+  color: #b58900;
+}
+.highlight .no {
+  color: #b58900;
+}
+.highlight .na {
+  color: #268bd2;
+}
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
+  color: #859900;
+}
+.highlight .ss {
+  color: #859900;
+}
+    </style>
+    <link href="stylesheets/screen-c9d8fa83.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print-953e3353.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all-e9bde216.js"></script>
+
+    <script>
+      $(function() { setupCodeCopy(); });
+    </script>
+  </head>
+
+  <body class="index" data-languages="[&quot;shell&quot;,&quot;python&quot;,&quot;javascript&quot;,&quot;http&quot;,&quot;java&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/payg-logo-f09c24d6.png" class="logo" alt="" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="shell">shell</a>
+              <a href="#" data-language-name="python">python</a>
+              <a href="#" data-language-name="javascript">javascript</a>
+              <a href="#" data-language-name="http">http</a>
+              <a href="#" data-language-name="java">java</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#paygv2-documentation" class="toc-h1 toc-link" data-title="PayGv2 Documentation">PayGv2 Documentation</a>
+          </li>
+          <li>
+            <a href="#description" class="toc-h1 toc-link" data-title="Description">Description</a>
+          </li>
+          <li>
+            <a href="#create" class="toc-h1 toc-link" data-title="/ Create">/ Create</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#create-post" class="toc-h2 toc-link" data-title="/Create post">/Create post</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#header-parameters" class="toc-h1 toc-link" data-title="Header Parameters">Header Parameters</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#authorization" class="toc-h2 toc-link" data-title="Authorization">Authorization</a>
+                  </li>
+                  <li>
+                    <a href="#possible-response" class="toc-h2 toc-link" data-title="Possible Response">Possible Response</a>
+                  </li>
+              </ul>
+          </li>
+      </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='paygv2-documentation'>PayGv2 Documentation</h1>
+<p>version : V1</p>
+
+<p>baseUri : uatapi.payg.in/payment/api/order/</p>
+
+<p>protocols : HTTPS</p>
+
+<p>mediaType : application/json</p>
+<h1 id='description'>Description</h1>
+<p>Simplify and grow your business.With the easiest integration and best in class payment solutions, experience seamless transactions with PayG. Check daily transactions and settlement details, generate instant refunds, access all payment features from a single powerful dashboard.</p>
+
+<blockquote>
+<p>/create post:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight python tab-python"><code><span class="c1"># PYTHON EXAMPLE
+</span>
+<span class="kn">import</span> <span class="nn">http.client</span>
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># CURL EXAMPLE</span>
+
+curl <span class="nt">-X</span> POST <span class="s2">"uatapi.payg.in/payment/api/order/create"</span> <span class="se">\</span>
+    <span class="nt">-H</span> <span class="s2">"Authorization: key:"</span>Authorization<span class="s2">" value:"</span>OTcwNDU0MTVkMzkyNDlhODk5NmM0MmUxYzk1OThlZDE6NDNiNDI1YTYxNDhiNGQ5NDk4YTQ5YmU2MTMyMThkYjc6TTo3ODc1<span class="s2">""</span> <span class="se">\</span>
+    <span class="nt">-d</span> @request_body
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="err">#</span> <span class="nx">JAVASCRIPT</span> <span class="nx">EXAMPLE</span>
+
+<span class="kd">const</span> <span class="nx">headers</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Headers</span><span class="p">();</span>
+</code></pre></div><div class="highlight"><pre class="highlight http tab-http"><code><span class="err"># HTTP EXAMPLE
+
+</span><span class="nf">POST</span> <span class="nn">/payment/api/order/create</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">uatapi.payg.in:443</span>
+</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="err">#</span> <span class="n">java</span> <span class="no">EXAMPLE</span>
+
+<span class="nc">RestTemplate</span> <span class="n">rest</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">RestTemplate</span><span class="o">();</span>
+<span class="nc">HttpHeaders</span> <span class="n">headers</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HttpHeaders</span><span class="o">();</span>
+</code></pre></div><h1 id='create'>/ Create</h1><h2 id='create-post'>/Create post</h2>
+<p>POST: /create</p>
+<h1 id='header-parameters'>Header Parameters</h1>
+<blockquote>
+<p>REQUEST HEADERS</p>
+</blockquote>
+<div class="highlight"><pre class="highlight python tab-python"><code><span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'Authorization'</span><span class="p">:</span> <span class="s">'key:"Authorization" value:"OTcwNDU0MTVkMzkyNDlhODk5NmM0MmUxYzk1OThlZDE6NDNiNDI1YTYxNDhiNGQ5NDk4YTQ5YmU2MTMyMThkYjc6TTo3ODc1"'</span><span class="p">}</span>
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>Authorization: key:<span class="s2">"Authorization"</span> value:<span class="s2">"OTcwNDU0MTVkMzkyNDlhODk5NmM0MmUxYzk1OThlZDE6NDNiNDI1YTYxNDhiNGQ5NDk4YTQ5YmU2MTMyMThkYjc6TTo3ODc1"</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">headers</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="dl">'</span><span class="s1">Authorization</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">key:"Authorization" value:"OTcwNDU0MTVkMzkyNDlhODk5NmM0MmUxYzk1OThlZDE6NDNiNDI1YTYxNDhiNGQ5NDk4YTQ5YmU2MTMyMThkYjc6TTo3ODc1"</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div><div class="highlight"><pre class="highlight http tab-http"><code><span class="err">Authorization: key:"Authorization" value:"OTcwNDU0MTVkMzkyNDlhODk5NmM0MmUxYzk1OThlZDE6NDNiNDI1YTYxNDhiNGQ5NDk4YTQ5YmU2MTMyMThkYjc6TTo3ODc1"
+</span></code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="n">headers</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="s">"Authorization"</span><span class="o">,</span> <span class="s">"key:"</span><span class="nc">Authorization</span><span class="s">" value:"</span><span class="nc">OTcwNDU0MTVkMzkyNDlhODk5NmM0MmUxYzk1OThlZDE6NDNiNDI1YTYxNDhiNGQ5NDk4YTQ5YmU2MTMyMThkYjc6TTo3ODc1</span><span class="s">""</span><span class="o">);</span>
+</code></pre></div><h2 id='authorization'>Authorization</h2>
+<table><thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>required</td>
+<td>true</td>
+</tr>
+<tr>
+<td>type</td>
+<td>string</td>
+</tr>
+<tr>
+<td>example</td>
+<td>key:&quot;Authorization&quot; value:&quot;OTcwNDU0MTVkMzkyNDlhODk5NmM0MmUxYzk1OThlZDE6NDNiNDI1YTYxNDhiNGQ5NDk4YTQ5YmU2MTMyMThkYjc6TTo3ODc1&quot;</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>REQUEST BODY:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight python tab-python"><code><span class="n">body</span> <span class="o">=</span> <span class="s">"""{
+  "MerchantKeyId": 292,
+  "AuthenticationKey": "12959e563133424a9576e541c2670a83",
+  "AuthenticationToken": "ca66b41b8e4f4187819d559a591ccfb7",
+  "UniqueRequestId": "AA10030",
+  "TransactionDate": {
+    "PaymentType": "ALL"
+  },
+  "OrderAmount": 15,
+  "OrderId": 225,
+  "OrderAmountData": "12.00",
+  "ProductData": {
+    "ProductId": 1,
+    "ProductDescription": "Test1",
+    "Amount": 0,
+    "Quantity": 0
+  },
+  "NextStepFlowData": {
+    "RedirectLabel": "Test12",
+    "Text": "Submit"
+  },
+  "TransactionType": "Charge",
+  "CustomerData": {
+    "CustomerId": 1,
+    "FirstName": "test",
+    "LastName": "m",
+    "MobileNo": "33333333333",
+    "email": "praveen@gmail.com",
+    "EmailReceipt": false,
+    "BillingAddress": "Telangana",
+    "BillingCity": "test",
+    "BillingState": "TS",
+    "BillingCountry": "IN",
+    "BillingZipCode": "TEST",
+    "ShippingFirstName": "",
+    "ShippingLastName": "",
+    "ShippingAddress": "",
+    "ShippingCity": "",
+    "ShippingState": "",
+    "ShippingCountry": "",
+    "ShippingZipCode": "",
+    "ShippingMobileNo": ""
+  },
+  "UserDefinedData": {
+    "UserDefined1": "",
+    "UserDefined2": "",
+    "UserDefined3": "",
+    "UserDefined4": "",
+    "UserDefined5": "",
+    "UserDefined6": "",
+    "UserDefined7": "",
+    "UserDefined8": "",
+    "UserDefined9": "",
+    "UserDefined10": "",
+    "UserDefined11": "",
+    "UserDefined12": "",
+    "UserDefined13": "",
+    "UserDefined14": "",
+    "UserDefined15": "",
+    "UserDefined16": "",
+    "UserDefined17": "",
+    "UserDefined18": "",
+    "UserDefined19": "",
+    "UserDefined20": ""
+  },
+  "RequestDateTime": "",
+  "RedirectUrl": "https://payg.in"
+}"""</span>
+
+<span class="n">conn</span> <span class="o">=</span> <span class="n">http</span><span class="p">.</span><span class="n">client</span><span class="p">.</span><span class="n">HTTPSConnection</span><span class="p">(</span><span class="s">'uatapi.payg.in'</span><span class="p">)</span>
+<span class="n">conn</span><span class="p">.</span><span class="n">request</span><span class="p">(</span><span class="s">'POST'</span><span class="p">,</span><span class="s">'/payment/api/order/create'</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">headers</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">conn</span><span class="p">.</span><span class="n">getresponse</span><span class="p">()</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">res</span><span class="p">.</span><span class="n">read</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">res</span><span class="p">.</span><span class="n">status</span><span class="p">,</span> <span class="n">res</span><span class="p">.</span><span class="n">reason</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">decode</span><span class="p">(</span><span class="s">'utf-8'</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="n">res</span><span class="p">.</span><span class="n">getheaders</span><span class="p">())</span>
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"OrderKeyId"</span>: <span class="s2">""</span>,
+  <span class="s2">"MerchantKeyId"</span>: 2,
+  <span class="s2">"ApiKey"</span>: <span class="s2">""</span>,
+  <span class="s2">"UniqueRequestId"</span>: <span class="s2">"ae021dg"</span>,
+  <span class="s2">"OrderAmount"</span>: 5,
+  <span class="s2">"OrderType"</span>: <span class="s2">""</span>,
+  <span class="s2">"OrderId"</span>: <span class="s2">""</span>,
+  <span class="s2">"OrderStatus"</span>: <span class="s2">""</span>,
+  <span class="s2">"OrderAmountData"</span>: <span class="o">{</span>
+    <span class="s2">"AmountDetail"</span>: <span class="o">[</span>
+      <span class="o">{</span>
+        <span class="s2">"AmountTypeDesc"</span>: <span class="s2">""</span>,
+        <span class="s2">"Amount"</span>: 0
+      <span class="o">}</span>
+    <span class="o">]</span>
+  <span class="o">}</span>,
+  <span class="s2">"ProductData"</span>: <span class="s2">""</span>,
+  <span class="s2">"NextStepFlowData"</span>: <span class="s2">""</span>,
+  <span class="s2">"TransactionData"</span>: <span class="o">{</span>
+    <span class="s2">"AcceptedPaymentTypes"</span>: <span class="s2">""</span>,
+    <span class="s2">"PaymentType"</span>: <span class="s2">""</span>,
+    <span class="s2">"SurchargeType"</span>: <span class="s2">""</span>,
+    <span class="s2">"SurchargeValue"</span>: 0,
+    <span class="s2">"Card"</span>: <span class="o">{</span>
+      <span class="s2">"CardNo"</span>: <span class="s2">""</span>,
+      <span class="s2">"CardType"</span>: 0,
+      <span class="s2">"NameOnCard"</span>: <span class="s2">""</span>,
+      <span class="s2">"ExpiryDate"</span>: <span class="s2">""</span>,
+      <span class="s2">"Cvv"</span>: <span class="s2">""</span>,
+      <span class="s2">"TrackData"</span>: <span class="s2">""</span>,
+      <span class="s2">"ChipData"</span>: <span class="s2">""</span>,
+      <span class="s2">"PassCode"</span>: <span class="s2">""</span>,
+      <span class="s2">"Ksn"</span>: <span class="s2">""</span>,
+      <span class="s2">"PinBlock"</span>: <span class="s2">""</span>,
+      <span class="s2">"AdditionalData1"</span>: <span class="s2">""</span>,
+      <span class="s2">"AdditionalData2"</span>: <span class="s2">""</span>
+    <span class="o">}</span>,
+    <span class="s2">"Ach"</span>: <span class="o">{</span>
+      <span class="s2">"BankCodeType"</span>: 0,
+      <span class="s2">"BankCode"</span>: <span class="s2">""</span>,
+      <span class="s2">"AccountNo"</span>: <span class="s2">""</span>,
+      <span class="s2">"BankAccountType"</span>: 0,
+      <span class="s2">"CheckNo"</span>: <span class="s2">""</span>,
+      <span class="s2">"SecCode"</span>: 1,
+      <span class="s2">"MicrData"</span>: <span class="s2">""</span>,
+      <span class="s2">"CheckFrontImage"</span>: <span class="s2">""</span>,
+      <span class="s2">"CheckBackImage"</span>: <span class="s2">""</span>,
+      <span class="s2">"NameOnCard"</span>: <span class="s2">""</span>,
+      <span class="s2">"First6Digit"</span>: <span class="s2">""</span>,
+      <span class="s2">"Last4Digit"</span>: <span class="s2">""</span>
+    <span class="o">}</span>,
+    <span class="s2">"Wallet"</span>: <span class="o">{</span>
+      <span class="s2">"BarQrCode"</span>: <span class="s2">""</span>,
+      <span class="s2">"UserName"</span>: <span class="s2">""</span>,
+      <span class="s2">"WalletType"</span>: 1,
+      <span class="s2">"FirstName"</span>: <span class="s2">""</span>,
+      <span class="s2">"LastName"</span>: <span class="s2">""</span>
+    <span class="o">}</span>,
+    <span class="s2">"Upi"</span>: <span class="o">{</span>
+      <span class="s2">"Vpa"</span>: <span class="s2">""</span>,
+      <span class="s2">"AccountNumber"</span>: <span class="s2">""</span>,
+      <span class="s2">"Ifsc"</span>: <span class="s2">""</span>,
+      <span class="s2">"AdhAadhaarNo"</span>: <span class="s2">""</span>
+    <span class="o">}</span>,
+    <span class="s2">"Card3DSecure"</span>: <span class="o">{</span>
+      <span class="s2">"AuthenticateTransaction"</span>: <span class="nb">true</span>,
+      <span class="s2">"Secure3DAuthenticationRequest"</span>: <span class="o">{</span>
+        <span class="s2">"MD"</span>: <span class="s2">""</span>,
+        <span class="s2">"PaRes"</span>: <span class="s2">""</span>
+      <span class="o">}</span>
+    <span class="o">}</span>,
+    <span class="s2">"RefTransactionId"</span>: <span class="s2">""</span>,
+    <span class="s2">"IndustrySpecicationCode"</span>: <span class="s2">""</span>,
+    <span class="s2">"PartialPaymentOption"</span>: <span class="s2">""</span>
+  <span class="o">}</span>,
+  <span class="s2">"CustomerData"</span>: <span class="o">{</span>
+    <span class="s2">"CustomerId"</span>: <span class="s2">"12"</span>,
+    <span class="s2">"CustomerNotes"</span>: <span class="s2">"Sample"</span>,
+    <span class="s2">"FirstName"</span>: <span class="s2">"First"</span>,
+    <span class="s2">"LastName"</span>: <span class="s2">"Last"</span>,
+    <span class="s2">"MobileNo"</span>: <span class="s2">"9011001100"</span>,
+    <span class="s2">"Email"</span>: <span class="s2">"test@gmail.com"</span>,
+    <span class="s2">"EmailReceipt"</span>: <span class="nb">true</span>,
+    <span class="s2">"BillingAddress"</span>: <span class="s2">""</span>,
+    <span class="s2">"BillingCity"</span>: <span class="s2">""</span>,
+    <span class="s2">"BillingState"</span>: <span class="s2">""</span>,
+    <span class="s2">"BillingCountry"</span>: <span class="s2">""</span>,
+    <span class="s2">"BillingZipCode"</span>: <span class="s2">""</span>,
+    <span class="s2">"ShippingFirstName"</span>: <span class="s2">""</span>,
+    <span class="s2">"ShippingLastName"</span>: <span class="s2">""</span>,
+    <span class="s2">"ShippingAddress"</span>: <span class="s2">""</span>,
+    <span class="s2">"ShippingCity"</span>: <span class="s2">""</span>,
+    <span class="s2">"ShippingState"</span>: <span class="s2">""</span>,
+    <span class="s2">"ShippingCountry"</span>: <span class="s2">""</span>,
+    <span class="s2">"ShippingZipCode"</span>: <span class="s2">""</span>,
+    <span class="s2">"ShippingMobileNo"</span>: <span class="s2">""</span>
+  <span class="o">}</span>,
+  <span class="s2">"UserDefinedData"</span>: <span class="o">{</span>
+    <span class="s2">"UserDefined1"</span>: <span class="s2">""</span>,
+    <span class="s2">"UserDefined2"</span>: <span class="s2">""</span>,
+    <span class="s2">"UserDefined3"</span>: <span class="s2">""</span>,
+    <span class="s2">"UserDefined4"</span>: <span class="s2">""</span>,
+    <span class="s2">"UserDefined5"</span>: <span class="s2">""</span>,
+    <span class="s2">"UserDefined6"</span>: <span class="s2">""</span>,
+    <span class="s2">"UserDefined7"</span>: <span class="s2">""</span>,
+    <span class="s2">"UserDefined8"</span>: <span class="s2">""</span>,
+    <span class="s2">"UserDefined9"</span>: <span class="s2">""</span>,
+    <span class="s2">"UserDefined10"</span>: <span class="s2">""</span>,
+    <span class="s2">"UserDefined11"</span>: <span class="s2">""</span>,
+    <span class="s2">"UserDefined12"</span>: <span class="s2">""</span>,
+    <span class="s2">"UserDefined13"</span>: <span class="s2">""</span>,
+    <span class="s2">"UserDefined14"</span>: <span class="s2">""</span>,
+    <span class="s2">"UserDefined15"</span>: <span class="s2">""</span>,
+    <span class="s2">"UserDefined16"</span>: <span class="s2">""</span>,
+    <span class="s2">"UserDefined17"</span>: <span class="s2">""</span>,
+    <span class="s2">"UserDefined18"</span>: <span class="s2">""</span>,
+    <span class="s2">"UserDefined19"</span>: <span class="s2">""</span>,
+    <span class="s2">"UserDefined20"</span>: <span class="s2">""</span>
+  <span class="o">}</span>,
+  <span class="s2">"IntegrationData"</span>: <span class="o">{</span>
+    <span class="s2">"UserName"</span>: <span class="s2">""</span>,
+    <span class="s2">"Source"</span>: <span class="s2">""</span>,
+    <span class="s2">"IntegrationType"</span>: <span class="s2">""</span>,
+    <span class="s2">"HashData"</span>: <span class="s2">""</span>,
+    <span class="s2">"PlatformId"</span>: <span class="s2">""</span>
+  <span class="o">}</span>,
+  <span class="s2">"ShipmentData"</span>: <span class="s2">""</span>,
+  <span class="s2">"RequestDateTime"</span>: <span class="s2">""</span>,
+  <span class="s2">"RedirectUrl"</span>: <span class="s2">""</span>
+<span class="o">}</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">body</span> <span class="o">=</span> <span class="s2">`{
+  "MerchantKeyId": 292,
+  "AuthenticationKey": "12959e563133424a9576e541c2670a83",
+  "AuthenticationToken": "ca66b41b8e4f4187819d559a591ccfb7",
+  "UniqueRequestId": "AA10030",
+  "TransactionDate": {
+    "PaymentType": "ALL"
+  },
+  "OrderAmount": 15,
+  "OrderId": 225,
+  "OrderAmountData": "12.00",
+  "ProductData": {
+    "ProductId": 1,
+    "ProductDescription": "Test1",
+    "Amount": 0,
+    "Quantity": 0
+  },
+  "NextStepFlowData": {
+    "RedirectLabel": "Test12",
+    "Text": "Submit"
+  },
+  "TransactionType": "Charge",
+  "CustomerData": {
+    "CustomerId": 1,
+    "FirstName": "test",
+    "LastName": "m",
+    "MobileNo": "33333333333",
+    "email": "praveen@gmail.com",
+    "EmailReceipt": false,
+    "BillingAddress": "Telangana",
+    "BillingCity": "test",
+    "BillingState": "TS",
+    "BillingCountry": "IN",
+    "BillingZipCode": "TEST",
+    "ShippingFirstName": "",
+    "ShippingLastName": "",
+    "ShippingAddress": "",
+    "ShippingCity": "",
+    "ShippingState": "",
+    "ShippingCountry": "",
+    "ShippingZipCode": "",
+    "ShippingMobileNo": ""
+  },
+  "UserDefinedData": {
+    "UserDefined1": "",
+    "UserDefined2": "",
+    "UserDefined3": "",
+    "UserDefined4": "",
+    "UserDefined5": "",
+    "UserDefined6": "",
+    "UserDefined7": "",
+    "UserDefined8": "",
+    "UserDefined9": "",
+    "UserDefined10": "",
+    "UserDefined11": "",
+    "UserDefined12": "",
+    "UserDefined13": "",
+    "UserDefined14": "",
+    "UserDefined15": "",
+    "UserDefined16": "",
+    "UserDefined17": "",
+    "UserDefined18": "",
+    "UserDefined19": "",
+    "UserDefined20": ""
+  },
+  "RequestDateTime": "",
+  "RedirectUrl": "https://payg.in"
+}`</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">init</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">method</span><span class="p">:</span> <span class="dl">'</span><span class="s1">POST</span><span class="dl">'</span><span class="p">,</span>
+  <span class="nx">headers</span><span class="p">,</span>
+  <span class="nx">body</span>
+<span class="p">};</span>
+
+<span class="nx">fetch</span><span class="p">(</span><span class="dl">'</span><span class="s1">https://uatapi.payg.in/payment/api/order/create</span><span class="dl">'</span><span class="p">,</span> <span class="nx">init</span><span class="p">)</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">response</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span> <span class="c1">// or .text() or .blob() ...</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">text</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="c1">// text is the response body</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="c1">// error in e.message</span>
+<span class="p">});</span>
+</code></pre></div><div class="highlight"><pre class="highlight http tab-http"><code><span class="err">{
+  "MerchantKeyId": 292,
+  "AuthenticationKey": "12959e563133424a9576e541c2670a83",
+  "AuthenticationToken": "ca66b41b8e4f4187819d559a591ccfb7",
+  "UniqueRequestId": "AA10030",
+  "TransactionDate": {
+    "PaymentType": "ALL"
+  },
+  "OrderAmount": 15,
+  "OrderId": 225,
+  "OrderAmountData": "12.00",
+  "ProductData": {
+    "ProductId": 1,
+    "ProductDescription": "Test1",
+    "Amount": 0,
+    "Quantity": 0
+  },
+  "NextStepFlowData": {
+    "RedirectLabel": "Test12",
+    "Text": "Submit"
+  },
+  "TransactionType": "Charge",
+  "CustomerData": {
+    "CustomerId": 1,
+    "FirstName": "test",
+    "LastName": "m",
+    "MobileNo": "33333333333",
+    "email": "praveen@gmail.com",
+    "EmailReceipt": false,
+    "BillingAddress": "Telangana",
+    "BillingCity": "test",
+    "BillingState": "TS",
+    "BillingCountry": "IN",
+    "BillingZipCode": "TEST",
+    "ShippingFirstName": "",
+    "ShippingLastName": "",
+    "ShippingAddress": "",
+    "ShippingCity": "",
+    "ShippingState": "",
+    "ShippingCountry": "",
+    "ShippingZipCode": "",
+    "ShippingMobileNo": ""
+  },
+  "UserDefinedData": {
+    "UserDefined1": "",
+    "UserDefined2": "",
+    "UserDefined3": "",
+    "UserDefined4": "",
+    "UserDefined5": "",
+    "UserDefined6": "",
+    "UserDefined7": "",
+    "UserDefined8": "",
+    "UserDefined9": "",
+    "UserDefined10": "",
+    "UserDefined11": "",
+    "UserDefined12": "",
+    "UserDefined13": "",
+    "UserDefined14": "",
+    "UserDefined15": "",
+    "UserDefined16": "",
+    "UserDefined17": "",
+    "UserDefined18": "",
+    "UserDefined19": "",
+    "UserDefined20": ""
+  },
+  "RequestDateTime": "",
+  "RedirectUrl": "https://payg.in"
+}
+</span></code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="nc">StringBuilder</span> <span class="n">sb</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">StringBuilder</span><span class="o">();</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"{\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"  \"MerchantKeyId\": 292,\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"  \"AuthenticationKey\": \"12959e563133424a9576e541c2670a83\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"  \"AuthenticationToken\": \"ca66b41b8e4f4187819d559a591ccfb7\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"  \"UniqueRequestId\": \"AA10030\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"  \"TransactionDate\": {\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"PaymentType\": \"ALL\"\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"  },\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"  \"OrderAmount\": 15,\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"  \"OrderId\": 225,\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"  \"OrderAmountData\": \"12.00\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"  \"ProductData\": {\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"ProductId\": 1,\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"ProductDescription\": \"Test1\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"Amount\": 0,\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"Quantity\": 0\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"  },\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"  \"NextStepFlowData\": {\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"RedirectLabel\": \"Test12\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"Text\": \"Submit\"\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"  },\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"  \"TransactionType\": \"Charge\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"  \"CustomerData\": {\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"CustomerId\": 1,\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"FirstName\": \"test\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"LastName\": \"m\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"MobileNo\": \"33333333333\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"email\": \"praveen@gmail.com\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"EmailReceipt\": false,\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"BillingAddress\": \"Telangana\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"BillingCity\": \"test\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"BillingState\": \"TS\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"BillingCountry\": \"IN\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"BillingZipCode\": \"TEST\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"ShippingFirstName\": \"\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"ShippingLastName\": \"\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"ShippingAddress\": \"\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"ShippingCity\": \"\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"ShippingState\": \"\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"ShippingCountry\": \"\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"ShippingZipCode\": \"\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"ShippingMobileNo\": \"\"\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"  },\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"  \"UserDefinedData\": {\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"UserDefined1\": \"\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"UserDefined2\": \"\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"UserDefined3\": \"\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"UserDefined4\": \"\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"UserDefined5\": \"\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"UserDefined6\": \"\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"UserDefined7\": \"\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"UserDefined8\": \"\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"UserDefined9\": \"\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"UserDefined10\": \"\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"UserDefined11\": \"\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"UserDefined12\": \"\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"UserDefined13\": \"\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"UserDefined14\": \"\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"UserDefined15\": \"\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"UserDefined16\": \"\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"UserDefined17\": \"\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"UserDefined18\": \"\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"UserDefined19\": \"\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"    \"UserDefined20\": \"\"\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"  },\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"  \"RequestDateTime\": \"\",\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"  \"RedirectUrl\": \"https://payg.in\"\n"</span><span class="o">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="s">"}"</span><span class="o">);</span>
+<span class="nc">String</span> <span class="n">body</span> <span class="o">=</span> <span class="n">sb</span><span class="o">.</span><span class="na">toString</span><span class="o">();</span>
+
+<span class="nc">HttpEntity</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">requestEntity</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HttpEntity</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;(</span><span class="n">body</span><span class="o">,</span> <span class="n">headers</span><span class="o">);</span>
+<span class="nc">ResponseEntity</span><span class="o">&lt;</span><span class="nc">String</span><span class="o">&gt;</span> <span class="n">responseEntity</span> <span class="o">=</span> <span class="n">rest</span><span class="o">.</span><span class="na">exchange</span><span class="o">(</span><span class="s">"https://uatapi.payg.in/payment/api/order/create"</span><span class="o">,</span> <span class="nc">HttpMethod</span><span class="o">.</span><span class="na">POST</span><span class="o">,</span> <span class="n">requestEntity</span><span class="o">,</span> <span class="nc">String</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+<span class="nc">HttpStatus</span> <span class="n">httpStatus</span> <span class="o">=</span> <span class="n">responseEntity</span><span class="o">.</span><span class="na">getStatusCode</span><span class="o">();</span>
+<span class="kt">int</span> <span class="n">status</span> <span class="o">=</span> <span class="n">httpStatus</span><span class="o">.</span><span class="na">value</span><span class="o">();</span>
+<span class="nc">String</span> <span class="n">response</span> <span class="o">=</span> <span class="n">responseEntity</span><span class="o">.</span><span class="na">getBody</span><span class="o">();</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"Response status: "</span> <span class="o">+</span> <span class="n">status</span><span class="o">);</span>
+<span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">response</span><span class="o">);</span>
+</code></pre></div><h2 id='possible-response'>Possible Response</h2>
+<p>200</p>
+
+<p>Status Success</p>
+
+<p>400</p>
+
+<p>Bad input parameter. Error message should indicate which one and why.</p>
+
+<p>401</p>
+
+<p>The client passed in the invalid Auth token. Client should refresh the token and then try again.</p>
+
+<p>403</p>
+
+<p>Merchant doesn’t exist. * Merchant not registered. * Application try to access to properties not belong to an App. * Application try to trash/purge root node. * Application try to update contentProperties. * Operation is blocked (for third-party apps). * Merchant account over quota.</p>
+
+<p>404</p>
+
+<p>Resource not found.</p>
+
+<p>405</p>
+
+<p>The resource doesn&#39;t support the specified HTTP verb.</p>
+
+<p>409</p>
+
+<p>Conflict</p>
+
+<p>411</p>
+
+<p>The Content-Length header was not specified.</p>
+
+<p>412</p>
+
+<p>Precondition failed.</p>
+
+<p>429</p>
+
+<p>Too many request for rate limiting.</p>
+
+<p>500</p>
+
+<p>Servers are not working as expected. The request is probably valid but needs to be requested again later.</p>
+
+<p>503</p>
+
+<p>Service Unavailable.</p>
+
+<blockquote>
+<p>Type </p>
+
+<p>any</p>
+
+<p>RESPONSE BODY</p>
+
+<p>200</p>
+</blockquote>
+<div class="highlight"><pre class="highlight python tab-python"><code><span class="p">{</span>
+  <span class="s">"OrderKeyId"</span><span class="p">:</span> <span class="s">"200915M292UAA10030"</span><span class="p">,</span>
+  <span class="s">"MerchantKeyId"</span><span class="p">:</span> <span class="mi">292</span><span class="p">,</span>
+  <span class="s">"UniqueRequestId"</span><span class="p">:</span> <span class="s">"AA10030"</span><span class="p">,</span>
+  <span class="s">"OrderType"</span><span class="p">:</span> <span class="s">"PAYMENT"</span><span class="p">,</span>
+  <span class="s">"OrderAmount"</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+  <span class="s">"OrderId"</span><span class="p">:</span> <span class="s">"225"</span><span class="p">,</span>
+  <span class="s">"OrderStatus"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s">"OrderPaymentStatus"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="s">"OrderPaymentStatusText"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s">"PaymentStatus"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="s">"PaymentTransactionId"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s">"PaymentResponseCode"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="s">"PaymentApprovalCode"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s">"PaymentResponseText"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s">"PaymentMethod"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s">"PaymentAccount"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s">"OrderNotes"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s">"PaymentDateTime"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s">"UpdatedDateTime"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+  <span class="s">"PaymentProcessUrl"</span><span class="p">:</span> <span class="s">"https://uat.payg.in/payment/payment?orderid=200915M292UAA10030"</span><span class="p">,</span>
+  <span class="s">"OrderPaymentCustomerData"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s">"FirstName"</span><span class="p">:</span> <span class="s">"test"</span><span class="p">,</span>
+    <span class="s">"LastName"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+    <span class="s">"Address"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+    <span class="s">"City"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+    <span class="s">"State"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+    <span class="s">"ZipCode"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+    <span class="s">"Country"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+    <span class="s">"MobileNo"</span><span class="p">:</span> <span class="s">"33333333333"</span><span class="p">,</span>
+    <span class="s">"Email"</span><span class="p">:</span> <span class="s">"praveen@gmail.com"</span><span class="p">,</span>
+    <span class="s">"UserId"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+    <span class="s">"IpAddress"</span><span class="p">:</span> <span class="n">null</span>
+  <span class="p">},</span>
+  <span class="s">"UpiLink"</span><span class="p">:</span> <span class="s">"&amp;sign="</span><span class="p">,</span>
+  <span class="s">"CustomerData"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s">"CustomerId"</span><span class="p">:</span> <span class="s">"1"</span><span class="p">,</span>
+    <span class="s">"CustomerNotes"</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+    <span class="s">"FirstName"</span><span class="p">:</span> <span class="s">"test"</span><span class="p">,</span>
+    <span class="s">"LastName"</span><span class="p">:</span> <span class="s">"m"</span><span class="p">,</span>
+    <span class="s">"MobileNo"</span><span class="p">:</span> <span class="s">"33333333333"</span><span class="p">,</span>
+    <span class="s">"Email"</span><span class="p">:</span> <span class="s">"praveen@gmail.com"</span><span class="p">,</span>
+    <span class="s">"EmailReceipt"</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+    <span class="s">"BillingAddress"</span><span class="p">:</span> <span class="s">"Telangana"</span><span class="p">,</span>
+    <span class="s">"BillingCity"</span><span class="p">:</span> <span class="s">"test"</span><span class="p">,</span>
+    <span class="s">"BillingState"</span><span class="p">:</span> <span class="s">"TS"</span><span class="p">,</span>
+    <span class="s">"BillingCountry"</span><span class="p">:</span> <span class="s">"IN"</span><span class="p">,</span>
+    <span class="s">"BillingZipCode"</span><span class="p">:</span> <span class="s">"TEST"</span><span class="p">,</span>
+    <span class="s">"ShippingFirstName"</span><span class="p">:</span> <span class="s">""</span><span class="p">,</span>
+    <span class="s">"ShippingLastName"</span><span class="p">:</span> <span class="s">""</span><span class="p">,</span>
+    <span class="s">"ShippingAddress"</span><span class="p">:</span> <span class="s">""</span><span class="p">,</span>
+    <span class="s">"ShippingCity"</span><span class="p">:</span> <span class="s">""</span><span class="p">,</span>
+    <span class="s">"ShippingState"</span><span class="p">:</span> <span class="s">""</span><span class="p">,</span>
+    <span class="s">"ShippingCountry"</span><span class="p">:</span> <span class="s">""</span><span class="p">,</span>
+    <span class="s">"ShippingZipCode"</span><span class="p">:</span> <span class="s">""</span><span class="p">,</span>
+    <span class="s">"ShippingMobileNo"</span><span class="p">:</span> <span class="s">""</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"OrderKeyId"</span>: <span class="s2">"200915M292UAA10030"</span>,
+  <span class="s2">"MerchantKeyId"</span>: 292,
+  <span class="s2">"UniqueRequestId"</span>: <span class="s2">"AA10030"</span>,
+  <span class="s2">"OrderType"</span>: <span class="s2">"PAYMENT"</span>,
+  <span class="s2">"OrderAmount"</span>: 15,
+  <span class="s2">"OrderId"</span>: <span class="s2">"225"</span>,
+  <span class="s2">"OrderStatus"</span>: null,
+  <span class="s2">"OrderPaymentStatus"</span>: 0,
+  <span class="s2">"OrderPaymentStatusText"</span>: null,
+  <span class="s2">"PaymentStatus"</span>: 0,
+  <span class="s2">"PaymentTransactionId"</span>: null,
+  <span class="s2">"PaymentResponseCode"</span>: 0,
+  <span class="s2">"PaymentApprovalCode"</span>: null,
+  <span class="s2">"PaymentResponseText"</span>: null,
+  <span class="s2">"PaymentMethod"</span>: null,
+  <span class="s2">"PaymentAccount"</span>: null,
+  <span class="s2">"OrderNotes"</span>: null,
+  <span class="s2">"PaymentDateTime"</span>: null,
+  <span class="s2">"UpdatedDateTime"</span>: null,
+  <span class="s2">"PaymentProcessUrl"</span>: <span class="s2">"https://uat.payg.in/payment/payment?orderid=200915M292UAA10030"</span>,
+  <span class="s2">"OrderPaymentCustomerData"</span>: <span class="o">{</span>
+    <span class="s2">"FirstName"</span>: <span class="s2">"test"</span>,
+    <span class="s2">"LastName"</span>: null,
+    <span class="s2">"Address"</span>: null,
+    <span class="s2">"City"</span>: null,
+    <span class="s2">"State"</span>: null,
+    <span class="s2">"ZipCode"</span>: null,
+    <span class="s2">"Country"</span>: null,
+    <span class="s2">"MobileNo"</span>: <span class="s2">"33333333333"</span>,
+    <span class="s2">"Email"</span>: <span class="s2">"praveen@gmail.com"</span>,
+    <span class="s2">"UserId"</span>: null,
+    <span class="s2">"IpAddress"</span>: null
+  <span class="o">}</span>,
+  <span class="s2">"UpiLink"</span>: <span class="s2">"&amp;sign="</span>,
+  <span class="s2">"CustomerData"</span>: <span class="o">{</span>
+    <span class="s2">"CustomerId"</span>: <span class="s2">"1"</span>,
+    <span class="s2">"CustomerNotes"</span>: null,
+    <span class="s2">"FirstName"</span>: <span class="s2">"test"</span>,
+    <span class="s2">"LastName"</span>: <span class="s2">"m"</span>,
+    <span class="s2">"MobileNo"</span>: <span class="s2">"33333333333"</span>,
+    <span class="s2">"Email"</span>: <span class="s2">"praveen@gmail.com"</span>,
+    <span class="s2">"EmailReceipt"</span>: <span class="nb">false</span>,
+    <span class="s2">"BillingAddress"</span>: <span class="s2">"Telangana"</span>,
+    <span class="s2">"BillingCity"</span>: <span class="s2">"test"</span>,
+    <span class="s2">"BillingState"</span>: <span class="s2">"TS"</span>,
+    <span class="s2">"BillingCountry"</span>: <span class="s2">"IN"</span>,
+    <span class="s2">"BillingZipCode"</span>: <span class="s2">"TEST"</span>,
+    <span class="s2">"ShippingFirstName"</span>: <span class="s2">""</span>,
+    <span class="s2">"ShippingLastName"</span>: <span class="s2">""</span>,
+    <span class="s2">"ShippingAddress"</span>: <span class="s2">""</span>,
+    <span class="s2">"ShippingCity"</span>: <span class="s2">""</span>,
+    <span class="s2">"ShippingState"</span>: <span class="s2">""</span>,
+    <span class="s2">"ShippingCountry"</span>: <span class="s2">""</span>,
+    <span class="s2">"ShippingZipCode"</span>: <span class="s2">""</span>,
+    <span class="s2">"ShippingMobileNo"</span>: <span class="s2">""</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+  <span class="dl">"</span><span class="s2">OrderKeyId</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">200915M292UAA10030</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">MerchantKeyId</span><span class="dl">"</span><span class="p">:</span> <span class="mi">292</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">UniqueRequestId</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">AA10030</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">OrderType</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">PAYMENT</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">OrderAmount</span><span class="dl">"</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">OrderId</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">225</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">OrderStatus</span><span class="dl">"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">OrderPaymentStatus</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">OrderPaymentStatusText</span><span class="dl">"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">PaymentStatus</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">PaymentTransactionId</span><span class="dl">"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">PaymentResponseCode</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">PaymentApprovalCode</span><span class="dl">"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">PaymentResponseText</span><span class="dl">"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">PaymentMethod</span><span class="dl">"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">PaymentAccount</span><span class="dl">"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">OrderNotes</span><span class="dl">"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">PaymentDateTime</span><span class="dl">"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">UpdatedDateTime</span><span class="dl">"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">PaymentProcessUrl</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://uat.payg.in/payment/payment?orderid=200915M292UAA10030</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">OrderPaymentCustomerData</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">FirstName</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">test</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">LastName</span><span class="dl">"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">Address</span><span class="dl">"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">City</span><span class="dl">"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">State</span><span class="dl">"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">ZipCode</span><span class="dl">"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">Country</span><span class="dl">"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">MobileNo</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">33333333333</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">Email</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">praveen@gmail.com</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">UserId</span><span class="dl">"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">IpAddress</span><span class="dl">"</span><span class="p">:</span> <span class="kc">null</span>
+  <span class="p">},</span>
+  <span class="dl">"</span><span class="s2">UpiLink</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">&amp;sign=</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">CustomerData</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">CustomerId</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">CustomerNotes</span><span class="dl">"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">FirstName</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">test</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">LastName</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">m</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">MobileNo</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">33333333333</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">Email</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">praveen@gmail.com</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">EmailReceipt</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">BillingAddress</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Telangana</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">BillingCity</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">test</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">BillingState</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">TS</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">BillingCountry</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">IN</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">BillingZipCode</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">TEST</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">ShippingFirstName</span><span class="dl">"</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">ShippingLastName</span><span class="dl">"</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">ShippingAddress</span><span class="dl">"</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">ShippingCity</span><span class="dl">"</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">ShippingState</span><span class="dl">"</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">ShippingCountry</span><span class="dl">"</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">ShippingZipCode</span><span class="dl">"</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">ShippingMobileNo</span><span class="dl">"</span><span class="p">:</span> <span class="dl">""</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><div class="highlight"><pre class="highlight http tab-http"><code><span class="err">
+{
+  "OrderKeyId": "200915M292UAA10030",
+  "MerchantKeyId": 292,
+  "UniqueRequestId": "AA10030",
+  "OrderType": "PAYMENT",
+  "OrderAmount": 15,
+  "OrderId": "225",
+  "OrderStatus": null,
+  "OrderPaymentStatus": 0,
+  "OrderPaymentStatusText": null,
+  "PaymentStatus": 0,
+  "PaymentTransactionId": null,
+  "PaymentResponseCode": 0,
+  "PaymentApprovalCode": null,
+  "PaymentResponseText": null,
+  "PaymentMethod": null,
+  "PaymentAccount": null,
+  "OrderNotes": null,
+  "PaymentDateTime": null,
+  "UpdatedDateTime": null,
+  "PaymentProcessUrl": "https://uat.payg.in/payment/payment?orderid=200915M292UAA10030",
+  "OrderPaymentCustomerData": {
+    "FirstName": "test",
+    "LastName": null,
+    "Address": null,
+    "City": null,
+    "State": null,
+    "ZipCode": null,
+    "Country": null,
+    "MobileNo": "33333333333",
+    "Email": "praveen@gmail.com",
+    "UserId": null,
+    "IpAddress": null
+  },
+  "UpiLink": "&amp;sign=",
+  "CustomerData": {
+    "CustomerId": "1",
+    "CustomerNotes": null,
+    "FirstName": "test",
+    "LastName": "m",
+    "MobileNo": "33333333333",
+    "Email": "praveen@gmail.com",
+    "EmailReceipt": false,
+    "BillingAddress": "Telangana",
+    "BillingCity": "test",
+    "BillingState": "TS",
+    "BillingCountry": "IN",
+    "BillingZipCode": "TEST",
+    "ShippingFirstName": "",
+    "ShippingLastName": "",
+    "ShippingAddress": "",
+    "ShippingCity": "",
+    "ShippingState": "",
+    "ShippingCountry": "",
+    "ShippingZipCode": "",
+    "ShippingMobileNo": ""
+  }
+}
+
+</span></code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="o">{</span>
+  <span class="s">"OrderKeyId"</span><span class="o">:</span> <span class="s">"200915M292UAA10030"</span><span class="o">,</span>
+  <span class="s">"MerchantKeyId"</span><span class="o">:</span> <span class="mi">292</span><span class="o">,</span>
+  <span class="s">"UniqueRequestId"</span><span class="o">:</span> <span class="s">"AA10030"</span><span class="o">,</span>
+  <span class="s">"OrderType"</span><span class="o">:</span> <span class="s">"PAYMENT"</span><span class="o">,</span>
+  <span class="s">"OrderAmount"</span><span class="o">:</span> <span class="mi">15</span><span class="o">,</span>
+  <span class="s">"OrderId"</span><span class="o">:</span> <span class="s">"225"</span><span class="o">,</span>
+  <span class="s">"OrderStatus"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+  <span class="s">"OrderPaymentStatus"</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span>
+  <span class="s">"OrderPaymentStatusText"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+  <span class="s">"PaymentStatus"</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span>
+  <span class="s">"PaymentTransactionId"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+  <span class="s">"PaymentResponseCode"</span><span class="o">:</span> <span class="mi">0</span><span class="o">,</span>
+  <span class="s">"PaymentApprovalCode"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+  <span class="s">"PaymentResponseText"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+  <span class="s">"PaymentMethod"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+  <span class="s">"PaymentAccount"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+  <span class="s">"OrderNotes"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+  <span class="s">"PaymentDateTime"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+  <span class="s">"UpdatedDateTime"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+  <span class="s">"PaymentProcessUrl"</span><span class="o">:</span> <span class="s">"https://uat.payg.in/payment/payment?orderid=200915M292UAA10030"</span><span class="o">,</span>
+  <span class="s">"OrderPaymentCustomerData"</span><span class="o">:</span> <span class="o">{</span>
+    <span class="s">"FirstName"</span><span class="o">:</span> <span class="s">"test"</span><span class="o">,</span>
+    <span class="s">"LastName"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+    <span class="s">"Address"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+    <span class="s">"City"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+    <span class="s">"State"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+    <span class="s">"ZipCode"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+    <span class="s">"Country"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+    <span class="s">"MobileNo"</span><span class="o">:</span> <span class="s">"33333333333"</span><span class="o">,</span>
+    <span class="s">"Email"</span><span class="o">:</span> <span class="s">"praveen@gmail.com"</span><span class="o">,</span>
+    <span class="s">"UserId"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+    <span class="s">"IpAddress"</span><span class="o">:</span> <span class="kc">null</span>
+  <span class="o">},</span>
+  <span class="s">"UpiLink"</span><span class="o">:</span> <span class="s">"&amp;sign="</span><span class="o">,</span>
+  <span class="s">"CustomerData"</span><span class="o">:</span> <span class="o">{</span>
+    <span class="s">"CustomerId"</span><span class="o">:</span> <span class="s">"1"</span><span class="o">,</span>
+    <span class="s">"CustomerNotes"</span><span class="o">:</span> <span class="kc">null</span><span class="o">,</span>
+    <span class="s">"FirstName"</span><span class="o">:</span> <span class="s">"test"</span><span class="o">,</span>
+    <span class="s">"LastName"</span><span class="o">:</span> <span class="s">"m"</span><span class="o">,</span>
+    <span class="s">"MobileNo"</span><span class="o">:</span> <span class="s">"33333333333"</span><span class="o">,</span>
+    <span class="s">"Email"</span><span class="o">:</span> <span class="s">"praveen@gmail.com"</span><span class="o">,</span>
+    <span class="s">"EmailReceipt"</span><span class="o">:</span> <span class="kc">false</span><span class="o">,</span>
+    <span class="s">"BillingAddress"</span><span class="o">:</span> <span class="s">"Telangana"</span><span class="o">,</span>
+    <span class="s">"BillingCity"</span><span class="o">:</span> <span class="s">"test"</span><span class="o">,</span>
+    <span class="s">"BillingState"</span><span class="o">:</span> <span class="s">"TS"</span><span class="o">,</span>
+    <span class="s">"BillingCountry"</span><span class="o">:</span> <span class="s">"IN"</span><span class="o">,</span>
+    <span class="s">"BillingZipCode"</span><span class="o">:</span> <span class="s">"TEST"</span><span class="o">,</span>
+    <span class="s">"ShippingFirstName"</span><span class="o">:</span> <span class="s">""</span><span class="o">,</span>
+    <span class="s">"ShippingLastName"</span><span class="o">:</span> <span class="s">""</span><span class="o">,</span>
+    <span class="s">"ShippingAddress"</span><span class="o">:</span> <span class="s">""</span><span class="o">,</span>
+    <span class="s">"ShippingCity"</span><span class="o">:</span> <span class="s">""</span><span class="o">,</span>
+    <span class="s">"ShippingState"</span><span class="o">:</span> <span class="s">""</span><span class="o">,</span>
+    <span class="s">"ShippingCountry"</span><span class="o">:</span> <span class="s">""</span><span class="o">,</span>
+    <span class="s">"ShippingZipCode"</span><span class="o">:</span> <span class="s">""</span><span class="o">,</span>
+    <span class="s">"ShippingMobileNo"</span><span class="o">:</span> <span class="s">""</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+<blockquote>
+<p>Type:</p>
+
+<p>any</p>
+</blockquote>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="shell">shell</a>
+                <a href="#" data-language-name="python">python</a>
+                <a href="#" data-language-name="javascript">javascript</a>
+                <a href="#" data-language-name="http">http</a>
+                <a href="#" data-language-name="java">java</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
